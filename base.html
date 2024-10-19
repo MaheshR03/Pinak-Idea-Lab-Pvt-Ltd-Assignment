@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .bg-diagonal {
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-diagonal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to bottom right, #2D0A5A 50%, rgb(202, 195, 202) 50%);
+            z-index: -1;
+        }
+        .icon-container {
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="assignment" class="max-w-7xl mx-auto my-16 px-4">
+        <div class="bg-diagonal text-white p-8 relative">
+            <h2 class="text-4xl font-bold mb-12 ml-4">OUR SERVICES</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white text-black p-6 pt-12 rounded-lg shadow-md hover-rotate relative">
+                    <div class="icon-container">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="wrench" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Emergency Plumbing Services</h3>
+                    <p class="text-gray-600 mb-4 text-center text-sm">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends and holidays.</p>
+                    <div class="text-center">
+                        <a href="#" class="text-purple-600 font-semibold hover:underline text-sm">EXPLORE THIS SERVICE ></a>
+                    </div>
+                </div>
+                <div class="bg-white text-black p-6 pt-12 rounded-lg shadow-md hover-rotate relative">
+                    <div class="icon-container">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="hammer" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Plumbing and Drains</h3>
+                    <p class="text-gray-600 mb-4 text-center text-sm">As the largest plumbing and drain service company, we make thousands of repairs every day</p>
+                    <div class="text-center">
+                        <a href="#" class="text-purple-600 font-semibold hover:underline text-sm">EXPLORE THIS SERVICE ></a>
+                    </div>
+                </div>
+                <div class="bg-white text-black p-6 pt-12 rounded-lg shadow-md hover-rotate relative">
+                    <div class="icon-container">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="droplets" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Water Damage</h3>
+                    <p class="text-gray-600 mb-4 text-center text-sm">Our teams are equipped with state-of-the-art water extraction and cleanup equipment</p>
+                    <div class="text-center">
+                        <a href="#" class="text-purple-600 font-semibold hover:underline text-sm">EXPLORE THIS SERVICE ></a>
+                    </div>
+                </div>
+                <div class="bg-white text-black p-6 pt-12 rounded-lg shadow-md hover-rotate relative">
+                    <div class="icon-container">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="flame" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Water Heaters</h3>
+                    <p class="text-gray-600 mb-4 text-center text-sm">Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters</p>
+                    <div class="text-center">
+                        <a href="#" class="text-purple-600 font-semibold hover:underline text-sm">EXPLORE THIS SERVICE ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        document.querySelectorAll('.hover-rotate').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                anime({
+                    targets: card,
+                    rotateY: '360deg',
+                    duration: 1000,
+                    easing: 'easeInOutSine'
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                anime({
+                    targets: card,
+                    rotateY: '0deg',
+                    duration: 1000,
+                    easing: 'easeInOutSine'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
