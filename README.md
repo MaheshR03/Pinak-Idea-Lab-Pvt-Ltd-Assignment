@@ -7,4 +7,4 @@ Technologies Used:
 2. Anime JS - For Animations
 3. Lucide - For Icons
 
-Check it out here : https://maheshr03.github.io/Pinak-Idea-Lab-Pvt-Ltd-Assignment/
+[Check it out here](https://maheshr03.github.io/Pinak-Idea-Lab-Pvt-Ltd-Assignment/)
